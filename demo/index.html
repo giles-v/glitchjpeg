@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf8">
+		<title>JS image glitch demo</title>
+		<style>
+			.glitchable_container { position: relative; display: inline-block; }
+			.glitchable_container canvas { position: absolute; left: 0; top: 0; }
+		</style>
+	</head>
+	<body>
+		<img src="capy-canoe.jpg" class="hoverglitch">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="../lib/glitchable_images.js"></script>
+		<script>
+			if (Modernizr.canvas) {
+				var glitcher = new GlitchableImages('.hoverglitch');
+				glitcher.init();
+			}
+		</script>
+	</body>
+</html>
