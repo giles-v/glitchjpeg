@@ -10,13 +10,13 @@
 	</head>
 	<body>
 		<img src="capy-canoe.jpg" class="hoverglitch">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script src="../lib/glitchable_images.js"></script>
+		<script src="../glitchjpeg.browser.js"></script>
 		<script>
-			if (Modernizr.canvas) {
-				var glitcher = new GlitchableImages('.hoverglitch');
-				glitcher.init();
+			var glitchables = glitchjpeg.attachTo('.hoverglitch');
+			for (var i = 0; i < glitchables.length; i++) {
+				var img = glitchables[i];
+				img.addEventListener('mousemove', () => glitchjpeg.applyRandom(img));
+				img.addEventListener('mouseout', () => glitchjpeg.apply(img, 0));
 			}
 		</script>
 	</body>

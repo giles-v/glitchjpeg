@@ -1,0 +1,32 @@
+{
+  "name": "glitchjpeg",
+  "version": "1.0.0",
+  "description": "Library to dynamically glitch JPEG images",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giles-v/js-imageglitch.git"
+  },
+  "keywords": [
+    "jpeg",
+    "image",
+    "glitch"
+  ],
+  "author": "giles-v",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giles-v/js-imageglitch/issues"
+  },
+  "homepage": "https://github.com/giles-v/js-imageglitch#readme",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup": "^0.42.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  }
+}
